@@ -6,45 +6,145 @@
 		<script src="https:///cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="m-3 rounded-lg bg-slate-50 p-2 drop-shadow-md">
-            <div>
-              <h1 class="mb-2 text-lg font-bold">Generador Lighting Addition</h1>
-              <label for="total">Suma parcial:</label>
-              <select class="form-select" name="total" id="total">
-                <option value="11" selected="true" id="total-0">11</option>
-                <option value="17" id="total-1">17</option>
-                <option value="20" id="total-2">20</option>
-              </select>
-            </div>
-            <div>
-              <label for="numrows">N&uacute;mero de filas:</label>
-              <input type="number" class="form-input" name="numrows" value="4" min="1" max="5" step="1" id="numrows" />
-            </div>
-            <div>
-              <label for="numcols">N&uacute;mero de columnas:</label>
-              <input type="number" class="form-input" name="numcols" value="4" min="1" max="5" step="1" id="numcols" />
-            </div>
-            <div>
-              <label for="numpages">N&uacute;mero de p&aacute;ginas:&nbsp;</label>
-              <input type="number" class="form-input" name="numpages" value="1" min="1" max="100" step="1" id="numpages" />
-            </div>
-            <div>
-              <button
-                type="button"
-                class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
-                name="button-1656085735556"
-                id="button-1656085735556"
-                onclick="lightingaddition(
-                      parseInt(document.getElementById('total').value),
-                      parseInt(document.getElementById('numcols').value),
-                      parseInt(document.getElementById('numrows').value),
-                      parseInt(document.getElementById('numpages').value));"
-              >
-                Generar
-              </button>
-            </div>
-          </div>
-          <img src="plantilla.png" class="mx-3 w-1/2"/>
+      <div class="m-3 rounded-lg bg-slate-50 p-2 drop-shadow-md">
+        <div>
+          <h1 class="mb-2 text-lg font-bold">Generador Lighting Addition</h1>
+          <label for="total">Suma parcial:</label>
+          <select class="form-select" name="total" id="total">
+            <option value="11" selected="true" id="total-0">11</option>
+            <option value="17" id="total-1">17</option>
+            <option value="20" id="total-2">20</option>
+          </select>
+        </div>
+        <div>
+          <label for="numrows">N&uacute;mero de filas:</label>
+          <input type="number" class="form-input" name="numrows" value="4" min="1" max="5" step="1" id="numrows" />
+        </div>
+        <div>
+          <label for="numcols">N&uacute;mero de columnas:</label>
+          <input type="number" class="form-input" name="numcols" value="4" min="1" max="5" step="1" id="numcols" />
+        </div>
+        <div>
+          <label for="numpages">N&uacute;mero de p&aacute;ginas:&nbsp;</label>
+          <input type="number" class="form-input" name="numpages" value="1" min="1" max="100" step="1" id="numpages" />
+        </div>
+        <div>
+          <button
+            type="button"
+            class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            name="button-1656085735556"
+            id="button-1656085735556"
+            onclick="lightingaddition(
+                  parseInt(document.getElementById('total').value),
+                  parseInt(document.getElementById('numcols').value),
+                  parseInt(document.getElementById('numrows').value),
+                  parseInt(document.getElementById('numpages').value));"
+          >
+            Generar
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <div class="m-2 rounded-xl bg-slate-300 p-2 shadow-lg">
+        <div class="flex justify-center text-lg font-bold">11</div>
+        <table class="border-separate rounded-md bg-white">
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full font-bold">1</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+1</td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+        </table>
+        </div>
+        <div class="m-2 rounded-xl bg-slate-300 p-2 shadow-lg">
+        <div class="flex justify-center text-lg font-bold">17</div>
+        <table class="border-separate rounded-md bg-white">
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full font-bold">2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">-1</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">-1</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">-1</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">-3</td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+        </table>
+        </div>
+        <div class="m-2 rounded-xl bg-slate-300 p-2 shadow-lg">
+        <div class="flex justify-center text-lg font-bold">20</div>
+        <table class="border-separate rounded-md bg-white">
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full font-bold">2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">+2</td>
+            <td class="h-6 w-6 rounded-full bg-green-600 font-bold">&nbsp;=</td>
+          </tr>
+          <tr>
+            <td class="h-6 w-6 rounded-full"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+            <td class="h-6 w-6 rounded-full bg-violet-400"></td>
+          </tr>
+        </table>
+        </div>
+        </div>
     </body>
 <script>
 function lightingaddition(total,cols,rows,pages) {
