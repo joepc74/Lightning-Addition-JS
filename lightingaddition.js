@@ -19,7 +19,6 @@ function lightingaddition(total,cols,rows,pages) {
     	posfila.push(posfila.at(-1)+heightpage/rows);
       }
 
-    console.log(posfila);
     let comb=generate_comb([],rows-1,total);
     
     
@@ -33,11 +32,9 @@ function lightingaddition(total,cols,rows,pages) {
                 numeros.splice(rows-2,0,getRndInteger(minmax[total][0][0],minmax[total][0][1]));
                 }
             for (fila=0;fila<rows;fila++) doc.text(numeros[fila].toString(), poscol[colum], posfila[fila]);
-            //console.log(numeros);
             }
        }
-     
-    doc.save("a4.pdf");
+    doc.save(`LightingAddition_total_${total}_${cols}x${rows}_${pages}_pages.pdf`);
 }
 
 function generate_comb(val,rows,total) {    
@@ -58,7 +55,6 @@ function generate_comb(val,rows,total) {
 }
 
 function rand(items) {
-    // "|" for a kinda "int div"
     return items[items.length * Math.random() | 0];
 }
 
