@@ -764,6 +764,43 @@ select {
   border-radius: 9999px;
 }
 
+.enlace {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+/* __play_start_utilities__ */
+
+.enlace:visited {
+  color: rgb(147 51 234 );
+}
+
+/* __play_end_utilities__ */
+
+/* __play_start_utilities__ */
+
+.enlace:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+/* __play_end_utilities__ */
+
+.absolute {
+  position: absolute;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -782,6 +819,10 @@ select {
 
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .inline-block {

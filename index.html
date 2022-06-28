@@ -8,7 +8,7 @@
     </head>
     <body>
       <div class="m-3 rounded-lg bg-slate-100 p-2 drop-shadow-lg inline-block">
-        <h1 class="mb-2 text-lg font-bold">Generador Lighting Addition</h1>
+        <h1 class="mb-2 text-lg font-bold" id="tituloweb">Generador Lighting Addition</h1>
         <div class="flex">
           <div class="mr-6">
             <div class="flex">
@@ -23,7 +23,7 @@
                       <option value="17">17 *</option>
                       <option value="20">20</option>
               </select></div>
-              <div class="text-xs ml-3">* mejor opci&oacute;n</div>
+              <div class="text-xs ml-3" id="total2">* mejor opci&oacute;n</div>
             </div>
             <div>
               <label for="numrows">N&uacute;mero de filas:</label>
@@ -41,8 +41,8 @@
               <button
                 type="button"
                 class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
-                name="button"
-                id="button"
+                name="generate"
+                id="generate"
                 onclick="lightingaddition(
                         parseInt(document.getElementById('total').value),
                         parseInt(document.getElementById('numcols').value),
@@ -87,7 +87,9 @@
             </table>
           </div>
         </div>
-      </div>
+      </div><div class="absolute top-3 right-0">
+  <div class="flex text-xs mr-3"><div class="enlace" onclick="changelang(this.innerHTML);">ES</div>/<div class="enlace" onclick="changelang(this.innerHTML);">EN</div></div>
+</div>
       <script>
       guias={11:['1','+2','+1'],12:['1','+3','+2'],13:['1','+4','+3'],14:['1','+5','+4'],15:['1','+6','+5'],17:['2','-1','-3'],20:['2','+2','&nbsp;=']}
       function cambiaguia() {
@@ -100,6 +102,33 @@
         document.getElementById('pos5').innerHTML =guias[total][2];
       }
       cambiaguia();
+      texts={
+        'ES':{
+          'title':'Generador Lighting Addition',
+          'total1':'Suma parcial:',
+          'total2':'* mejor opción',
+          'numrows':'Número de filas:',
+          'numcols':'Número de columnas:',
+          'numpages':'Número de páginas:',
+          'generate':'Generar',},
+        'EN':{
+          'title':'Lighting Addition Generator',
+          'total1':'Partial sum:',
+          'total2':'* better option',
+          'numrows':'Number of rows:',
+          'numcols':'Number of columns:',
+          'numpages':'Number of pages:',
+          'generate':'Generate',},
+      }
+      function changelang(lang) {
+        document.getElementById('tituloweb').innerHTML=texts[lang]['title'];
+        document.getElementById('total').labels[0].innerHTML=texts[lang]['total1'];
+        document.getElementById('total2').innerHTML=texts[lang]['total2'];
+        document.getElementById('numrows').labels[0].innerHTML=texts[lang]['numrows'];
+        document.getElementById('numcols').labels[0].innerHTML=texts[lang]['numcols'];
+        document.getElementById('numpages').labels[0].innerHTML=texts[lang]['numpages'];
+        document.getElementById('generate').innerHTML=texts[lang]['generate'];
+      }
       </script>
     </body>
 </html>
