@@ -1,6 +1,8 @@
 function lightingaddition(total,cols,rows,pages) {
-    const minmax={11:[[0,7],[0,8]],17:[[2,9],[3,9]],20:[[0,7],[0,7]]} // minimos y maximos del numero aleatorio
-    const tamfuente={4:145,5:135} // tamaño de la fuente
+    // min and max of cols of random numbers
+    const minmax={11:[[0,7],[0,8]],12:[[0,6],[0,7]],13:[[0,5],[0,6]],14:[[0,4],[0,5]],15:[[0,3],[0,4]],17:[[2,9],[3,9]],20:[[0,7],[0,7]]}
+    // font size
+    const tamfuente={4:145,5:135}
 
 
     var doc = new jspdf.jsPDF({orientation: "landscape",unit: "mm", format:"a4"});
